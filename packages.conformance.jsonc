@@ -1,0 +1,80 @@
+{
+  /* ensure each package has mobx + mono/scripts */
+  "/@mono/(?!scripts).*/i": {
+    "dependencies": {
+      "mobx": "^5.9.4"
+    },
+    "devDependencies": {
+      "@mono/scripts": "0.0.1",
+      "typescript": "^3.4.4"
+    }
+  },
+  /* ensure each package has babel, typescript, jest */
+  "/@mono/.*/i": {
+    "scripts": {
+      "check-types": "tsc --project ./tsconfig.json"
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.4.4",
+      "@babel/core": "^7.4.4",
+      "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+      "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+      "@babel/preset-env": "^7.4.4",
+      "@babel/preset-typescript": "^7.3.3",
+      "@types/jest": "^24.0.11",
+      "babel-eslint": "^10.0.1",
+      "babel-jest": "^24.0.0",
+      "core-js": "2.6.5",
+      "jest": "^24.7.1"
+    }
+  },
+  /* ensure consistency of react packages + mobx-react */
+  "/@mono/(desktop|mobile|ui|ui-dom|web)/i": {
+    "dependencies": {
+      "mobx-react-lite": "^1.3.2",
+      "@react-navigation/core": "^3.4.1",
+      "react": "16.8.3",
+      "react-native-vector-icons": "^6.4.2"
+    },
+    "devDependencies": {
+      "@types/react": "^16.8.14",
+      "@types/react-native": "^0.57.46",
+      "@babel/preset-react": "^7.0.0"
+    }
+  },
+  /* ensure consistency of react dom packages */
+  "/@mono/(desktop|ui-dom|web)/i": {
+    "dependencies": {
+      "@react-navigation/web": "git+https://github.com/dpnolte/react-navigation-web",
+      "react-dom": "16.8.3",
+      "react-native-svg-web": "^1.0.1",
+      "react-native-web": "^0.11.2"
+    },
+    "devDependencies": {
+      "@types/react-dom": "^16.8.4"
+    }
+  },
+  /* ensure consistency of react-navigation */
+  "/@mono/(desktop|mobile|ui-dom|web)/i": {
+    "dependencies": {
+      "@react-navigation/core": "^3.4.1"
+    }
+  },
+  /* ensure consistency of react-native */
+  "/@mono/(mobile|ui(?!-dom))/i": {
+    "dependencies": {
+      "react-native": "0.59.5",
+      "react-native-svg": "^9.4.0"
+    }
+  },
+  /* ensure consistency of pack-package */
+  "/@mono/(mobile)/i": {
+    "scripts": {
+      "postinstall": "patch-package"
+    },
+    "devDependencies": {
+      "patch-package": "^6.1.2",
+      "postinstall-postinstall": "^2.0.0"
+    }
+  }
+}

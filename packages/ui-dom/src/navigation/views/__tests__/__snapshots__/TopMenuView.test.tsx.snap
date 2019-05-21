@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopMenuView unit tests should match snapshot 1`] = `
+<div
+  className="container"
+>
+  <header
+    className="header"
+  >
+    <nav
+      className="top-menu-nav"
+    >
+      <ul
+        className="primary"
+      >
+        <li>
+          <a
+            data-testid="top-menu-home-link"
+            href="/Test"
+            onClick={[Function]}
+          >
+            <div
+              className="css-text-76zvg2"
+              dir="auto"
+              style={
+                Object {
+                  "color": "rgba(187,187,187,1.00)",
+                  "fontFamily": "MaterialCommunityIcons",
+                  "fontSize": "20px",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                }
+              }
+            >
+              
+            </div>
+            <span
+              className="top-menu-link-text"
+            >
+              Home
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            data-testid="top-menu-docs-link"
+            href="/Test"
+            onClick={[Function]}
+          >
+            <div
+              className="css-text-76zvg2"
+              dir="auto"
+              style={
+                Object {
+                  "color": "rgba(187,187,187,1.00)",
+                  "fontFamily": "MaterialCommunityIcons",
+                  "fontSize": "20px",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                }
+              }
+            >
+              吝
+            </div>
+            <span
+              className="top-menu-link-text"
+            >
+              Documents
+            </span>
+          </a>
+          <ul
+            className="sub"
+          >
+            <li>
+              <a
+                data-testid="top-menu-docs-link"
+                href="/Test"
+                onClick={[Function]}
+              >
+                Doc 1
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            data-testid="top-menu-about-link"
+            href="/Test"
+            onClick={[Function]}
+          >
+            <div
+              className="css-text-76zvg2"
+              dir="auto"
+              style={
+                Object {
+                  "color": "rgba(187,187,187,1.00)",
+                  "fontFamily": "MaterialCommunityIcons",
+                  "fontSize": "20px",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                }
+              }
+            >
+              
+            </div>
+            <span
+              className="top-menu-link-text"
+            >
+              About
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section
+    className="content"
+  >
+    <div>
+      scene view content
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,66 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "desktop": "yarn --cwd packages/desktop start",
+    "android": "yarn --cwd packages/mobile android",
+    "ios": "yarn --cwd packages/mobile ios",
+    "web": "yarn --cwd packages/web start",
+    "clean": "lerna clean",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx 'packages/*/src/**/*.{ts,tsx,js,jsx}'",
+    "lint:fix": "yarn run lint --fix",
+    "lint-old": "lerna run lint --stream",
+    "lint-old:fix": "lerna run lint:fix --stream",
+    "cli": "node packages/scripts/dist/cli/index.js",
+    "ts-cli": "ts-node --project packages/scripts/tsconfig.json --files packages/scripts/src/cli/index.ts",
+    "package-conformance:check": "yarn cli package-conformance --check --config packages.conformance.jsonc",
+    "package-conformance:fix": "yarn cli package-conformance --fix --config packages.conformance.jsonc",
+    "check-types": "lerna run check-types --stream",
+    "postinstall": "yarn --cwd packages/scripts build; patch-package"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged && yarn package-conformance:check",
+      "pre-push": "yarn lint && yarn package-conformance:check && yarn check-types"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,jsonc,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "packages/*/src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --ext .js,.jsx,.ts,.tsx --fix",
+      "git add",
+      "yarn run cli check-types",
+      "yarn run cli test"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "1.9.0",
+    "@typescript-eslint/parser": "1.9.0",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-typescript": "4.0.0",
+    "eslint-config-prettier": "4.2.0",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-jest": "22.5.1",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.13.0",
+    "eslint-plugin-react-hooks": "1.6.0",
+    "eslint-plugin-react-native": "^3.7.0",
+    "husky": "^2.2.0",
+    "lerna": "^3.13.1",
+    "lint-staged": "^8.1.6",
+    "patch-package": "^6.1.2",
+    "postinstall-postinstall": "^2.0.0",
+    "prettier": "^1.17.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.4"
+  }
+}

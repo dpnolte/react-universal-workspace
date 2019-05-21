@@ -1,0 +1,11 @@
+tsconfig.json
+tsconfig.base.json
+packages.conformance.jsonc
+package.json
+.vscode/**
+node_modules/**
+**/node_modules/**
+.eslintrc.base.js
+prettier.base.js
+prettier.config.js
+typings

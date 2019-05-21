@@ -1,0 +1,52 @@
+{
+  "name": "@mono/scripts",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "cli": "bin/cli.js"
+  },
+  "scripts": {
+    "cli": "bin/cli.js",
+    "build": "babel --extensions .ts,.tsx src --out-dir dist --ignore '**/__tests__/**' --source-maps --delete-dir-on-start",
+    "test": "jest",
+    "desktop-create-package": "ts-node --files src/desktop/createPackageForDesktopApp.ts",
+    "check-types": "tsc --project ./tsconfig.json"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4",
+    "aggregate-error": "^3.0.0",
+    "deep-diff": "^1.0.2",
+    "execa": "^1.0.0",
+    "ncp": "^2.0.0",
+    "rimraf": "^2.6.3",
+    "strip-json-comments": "^3.0.1",
+    "tmp": "^0.1.0",
+    "typescript": "^3.4.4",
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/execa": "^0.9.0",
+    "@types/jest": "^24.0.11",
+    "@types/ncp": "^2.0.1",
+    "@types/node": "^12.0.0",
+    "@types/rimraf": "^2.0.2",
+    "@types/tmp": "^0.1.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
+    "core-js": "2.6.5",
+    "jest": "^24.7.1",
+    "metro-memory-fs": "^0.54.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0"
+  }
+}

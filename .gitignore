@@ -1,0 +1,27 @@
+**/node_modules
+lerna-debug.log
+
+# NodeJS
+npm-debug.log
+node_modules
+yarn-error.log
+
+# vs code
+.vscode/.react/debuggerWorker.js
+.vscode/.react/index.bundle
+.vscode/.react/index.map
+.vscode/.react/.vscode/launchReactNative.js
+.vscode/tags
+
+# typescript project references
+tsconfig.tsbuildinfo
+
+# OS X
+.DS_Store
+
+# Exponent
+.exponent
+
+# Jest
+coverage
+test_package

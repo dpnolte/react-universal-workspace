@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true,
+    "lib": ["es6", "es2017"],
+    "target": "esnext"
+  },
+  "include": ["src", "../../typings/**/*.d.ts"]
+}

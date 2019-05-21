@@ -1,0 +1,49 @@
+{
+  "name": "@mono/ui-dom",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "check-types": "tsc --project ./tsconfig.json"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@mono/ui": "0.0.1",
+    "@react-navigation/core": "^3.4.1",
+    "@react-navigation/web": "git+https://github.com/dpnolte/react-navigation-web",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-native-vector-icons": "^6.4.2",
+    "react-navigation-hooks": "^1.0.0-alpha.2",
+    "react-native-svg-web": "^1.0.1",
+    "react-native-web": "^0.11.2",
+    "mobx": "^5.9.4",
+    "mobx-react-lite": "^1.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-native-vector-icons": "^6.4.0",
+    "jest": "^24.7.1",
+    "jest-dom": "^3.1.3",
+    "react-native-svg-web": "^1.0.1",
+    "react-native-web": "^0.11.2",
+    "react-test-renderer": "^16.8.6",
+    "react-testing-library": "^7.0.0",
+    "typescript": "^3.4.4",
+    "@mono/scripts": "0.0.1",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
+    "@types/react-native": "^0.57.46",
+    "@babel/preset-react": "^7.0.0",
+    "core-js": "2.6.5"
+  }
+}
