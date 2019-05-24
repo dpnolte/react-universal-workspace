@@ -83,6 +83,7 @@ apply from: mobilePackagePath + "node_modules/react-native/react.gradle"
 
 // react-native-vector-icons
 project.ext.vectoricons = [
+    iconFontsDir: workspaceRootPath + "node_modules/react-native-vector-icons/Fonts",
     iconFontNames: [ 'MaterialCommunityIcons.ttf' ] 
 ]
 apply from: workspaceRootPath + "node_modules/react-native-vector-icons/fonts.gradle"
