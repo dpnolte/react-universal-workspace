@@ -50,7 +50,7 @@
     "jest": "^24.7.1",
     "prettier": "^1.17.0",
     "razzle-dev-utils": "^3.0.0",
-    "react-dev-utils": "^9.0.1",
+    "react-dev-utils": "^11.0.4",
     "source-map-loader": "^0.2.4",
     "typescript": "^3.4.4"
   },
